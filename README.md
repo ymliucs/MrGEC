@@ -65,7 +65,7 @@ python handle_leakage.py --data_dir data/ns_original --out_dir data/ns_leakage_p
 
 ## Download data
 
-You can download all the data we use [here](https://drive.google.com/file/d/1PwQ8l5HZ2E5vcW-QZlFYqcU0SqM2INws/view?usp=sharing).
+You can download all the data we use [here](https://drive.google.com/file/d/1rUjCLu7m4lYvlozOrJ83AzTdaVW1i5w2/view?usp=sharing).
 
 ## Run
 You can see all the commands for running our experiments in the *bash* folder, and the hyperparameters can be set in the *configs* folder.
