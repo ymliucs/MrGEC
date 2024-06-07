@@ -50,10 +50,10 @@ We find the FCGEC-Train and NaSGEC-Exam/NaCGEC have a severe **data leakage** pr
 
 All the datasets need to be processed to the follow format:
 ```txt
-idx [src] [tgt1] [tgt2] ... 
+[idx] [src] [tgt1] [tgt2] ... 
 ```
 
-Where idx is the number of instances which start with 1, and the sentences are separate by `\t`. Usage example:
+Where `[idx]` is the number of instances which start with 1, and the sentences are separate by `\t`. Usage example:
 ```
 python handle_leakage.py --data_dir data/ns_original --out_dir data/ns_leakage_processed --train_file FCGEC_train_filtered.para --extract_test_files nasgec.exam.para,nacgec.all.para  --frozen_test_files fcgec.dev.para,fcgec.test.para
 
