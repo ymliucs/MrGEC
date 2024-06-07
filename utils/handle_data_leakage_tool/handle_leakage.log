@@ -1,0 +1,127 @@
+================================================== Data Remove Repetition ==================================================
+
+FCGEC_train_filtered.para remove repetition:
+Original source sentences: 35354
+Original target sentences: 43283
+Unique source sentences: 35343
+Unique target sentences: 43262
+
+nasgec.exam.para remove repetition:
+Original source sentences: 7000
+Original target sentences: 10182
+Unique source sentences: 6669
+Unique target sentences: 9861
+
+nacgec.all.para remove repetition:
+Original source sentences: 6369
+Original target sentences: 7568
+Unique source sentences: 6369
+Unique target sentences: 7568
+
+fcgec.dev.para remove repetition:
+Original source sentences: 2000
+Original target sentences: 2549
+Unique source sentences: 2000
+Unique target sentences: 2549
+
+fcgec.test.para remove repetition:
+Original source sentences: 3000
+Original target sentences: 0
+Unique source sentences: 3000
+Unique target sentences: 0
+
+================================================== Extract Test Sentences ==================================================
+
+Extract same or similar source sentences from nasgec.exam.para to FCGEC_train_filtered.para
+Train data FCGEC_train_filtered.para find same source sentences: 2881
+Train data FCGEC_train_filtered.para merge same source sentences: 1149
+Train data FCGEC_train_filtered.para add target sentences of same source sentences: 1668
+Train data FCGEC_train_filtered.para add average target sentences of same source sentences: 1.45
+Train data FCGEC_train_filtered.para now have target sentences of same source sentences: 3284
+Train data FCGEC_train_filtered.para now have average target sentences of same source sentences: 2.86
+Train data FCGEC_train_filtered.para ignore same source sentences because of repetition: 1732
+Train data FCGEC_train_filtered.para ignore add target sentences of same source sentences because of repetition: 2381
+Train data FCGEC_train_filtered.para add similar source sentences: 1171
+Train data FCGEC_train_filtered.para add target sentences of similar source sentences: 1783
+Train data FCGEC_train_filtered.para add average target sentences of similar source sentences: 1.52
+Train data FCGEC_train_filtered.para add source sentences: 2320
+Train data FCGEC_train_filtered.para add target sentences: 3451
+Train data FCGEC_train_filtered.para add average target sentences: 1.49
+Train data FCGEC_train_filtered.para now have source sentences: 36514
+Train data FCGEC_train_filtered.para now have target sentences: 46713
+Test data nasgec.exam.para delect same source sentences: 2881
+Test data nasgec.exam.para delect target sentences of same source sentences: 4049
+Test data nasgec.exam.para delect similar source sentences: 1171
+Test data nasgec.exam.para delect target sentences of similar sentences: 1783
+Test data nasgec.exam.para delect source sentences: 4052
+Test data nasgec.exam.para delect target sentences: 5832
+Test data nasgec.exam.para now have source sentences: 2617
+Test data nasgec.exam.para now have target sentences: 4029
+
+Extract same or similar source sentences from nacgec.all.para to FCGEC_train_filtered.para
+Train data FCGEC_train_filtered.para find same source sentences: 2121
+Train data FCGEC_train_filtered.para merge same source sentences: 705
+Train data FCGEC_train_filtered.para add target sentences of same source sentences: 773
+Train data FCGEC_train_filtered.para add average target sentences of same source sentences: 1.10
+Train data FCGEC_train_filtered.para now have target sentences of same source sentences: 1866
+Train data FCGEC_train_filtered.para now have average target sentences of same source sentences: 2.65
+Train data FCGEC_train_filtered.para ignore same source sentences because of repetition: 1416
+Train data FCGEC_train_filtered.para ignore add target sentences of same source sentences because of repetition: 1764
+Train data FCGEC_train_filtered.para add similar source sentences: 1096
+Train data FCGEC_train_filtered.para add target sentences of similar source sentences: 1305
+Train data FCGEC_train_filtered.para add average target sentences of similar source sentences: 1.19
+Train data FCGEC_train_filtered.para add source sentences: 1801
+Train data FCGEC_train_filtered.para add target sentences: 2078
+Train data FCGEC_train_filtered.para add average target sentences: 1.15
+Train data FCGEC_train_filtered.para now have source sentences: 37610
+Train data FCGEC_train_filtered.para now have target sentences: 48791
+Test data nacgec.all.para delect same source sentences: 2121
+Test data nacgec.all.para delect target sentences of same source sentences: 2537
+Test data nacgec.all.para delect similar source sentences: 1096
+Test data nacgec.all.para delect target sentences of similar sentences: 1305
+Test data nacgec.all.para delect source sentences: 3217
+Test data nacgec.all.para delect target sentences: 3842
+Test data nacgec.all.para now have source sentences: 3152
+Test data nacgec.all.para now have target sentences: 3726
+
+================================================== Remove Train Sentences ==================================================
+
+Delete same or similar source sentences between FCGEC_train_filtered.para and nasgec.exam.para
+Train data FCGEC_train_filtered.para delect same source sentences: 0
+Train data FCGEC_train_filtered.para delect target sentences of same source sentences: 0
+Train data FCGEC_train_filtered.para delect similar source sentences: 4
+Train data FCGEC_train_filtered.para delect target sentences of similar source sentences: 5
+Train data FCGEC_train_filtered.para delect source sentences: 4
+Train data FCGEC_train_filtered.para delect target sentences: 5
+Train data FCGEC_train_filtered.para now have source sentences: 37606
+Train data FCGEC_train_filtered.para now have target sentences: 48786
+
+Delete same or similar source sentences between FCGEC_train_filtered.para and nacgec.all.para
+Train data FCGEC_train_filtered.para delect same source sentences: 0
+Train data FCGEC_train_filtered.para delect target sentences of same source sentences: 0
+Train data FCGEC_train_filtered.para delect similar source sentences: 4
+Train data FCGEC_train_filtered.para delect target sentences of similar source sentences: 5
+Train data FCGEC_train_filtered.para delect source sentences: 4
+Train data FCGEC_train_filtered.para delect target sentences: 5
+Train data FCGEC_train_filtered.para now have source sentences: 37602
+Train data FCGEC_train_filtered.para now have target sentences: 48781
+
+Delete same or similar source sentences between FCGEC_train_filtered.para and fcgec.dev.para
+Train data FCGEC_train_filtered.para delect same source sentences: 96
+Train data FCGEC_train_filtered.para delect target sentences of same source sentences: 132
+Train data FCGEC_train_filtered.para delect similar source sentences: 813
+Train data FCGEC_train_filtered.para delect target sentences of similar source sentences: 1064
+Train data FCGEC_train_filtered.para delect source sentences: 909
+Train data FCGEC_train_filtered.para delect target sentences: 1196
+Train data FCGEC_train_filtered.para now have source sentences: 36693
+Train data FCGEC_train_filtered.para now have target sentences: 47585
+
+Delete same or similar source sentences between FCGEC_train_filtered.para and fcgec.test.para
+Train data FCGEC_train_filtered.para delect same source sentences: 64
+Train data FCGEC_train_filtered.para delect target sentences of same source sentences: 99
+Train data FCGEC_train_filtered.para delect similar source sentences: 407
+Train data FCGEC_train_filtered.para delect target sentences of similar source sentences: 568
+Train data FCGEC_train_filtered.para delect source sentences: 471
+Train data FCGEC_train_filtered.para delect target sentences: 667
+Train data FCGEC_train_filtered.para now have source sentences: 36222
+Train data FCGEC_train_filtered.para now have target sentences: 46918
