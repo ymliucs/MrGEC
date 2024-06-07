@@ -8,7 +8,7 @@ __Yumeng Liu__, Zhenghua Li<sup title="Corresponding author" style="font-size:10
 ## Abstract
 This repo contains the code for our ACL 2024 Findings paper: Towards Better Utilization of Multi-Reference Training Data for Chinese Grammatical Error Correction.
 
-## Setup
+## Set Up
 1. Prepare the conda environment for MrGEC
 ```shell
 conda create -n mrgec python==3.10.10
@@ -80,7 +80,7 @@ bash bash/run_fcgec_avgl_minl.sh
 
 You can download and check all the logs of our experiments [here](https://drive.google.com/file/d/1qqcL0-eQgTUjr9RlEKTxLIhAgJ749L6j/view?usp=sharing).
 
-## Acknowledge
+## Acknowledgements
 1. This repository is completely based on [SuPar](https://github.com/yzhangcs/parser).
 2. We use the [ChERRANT](https://github.com/HillZhang1999/MuCGEC/tree/main/scorers/ChERRANT) for all the evaluation.
 
