@@ -8,7 +8,7 @@ __Yumeng Liu__, Zhenghua Li<sup title="Corresponding author" style="font-size:10
 ## Abstract
 This repo contains the code for our ACL 2024 Findings paper: Towards Better Utilization of Multi-Reference Training Data for Chinese Grammatical Error Correction.
 
-## Set Up
+## Set up
 1. Prepare the conda environment for MrGEC
 ```shell
 conda create -n mrgec python==3.10.10
@@ -45,7 +45,7 @@ Where `[src]` and `[tgt]` are the source and target sentences, respectively.
 A `\t` is used to separate the prefix `S` or `T` and the sentence.
 Each instance is separated by a blank line.
 
-## Handle Data Leakage
+## Handle data leakage
 We find the FCGEC-Train and NaSGEC-Exam/NaCGEC have a severe **data leakage** problem. The code in *utils/handle_data_leakage_tool* can handle all GEC datasets which have data leakage problem.
 
 All the datasets need to be processed to the follow format:
