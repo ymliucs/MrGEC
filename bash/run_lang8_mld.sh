@@ -20,5 +20,7 @@ do
         --conf configs/mucgec.predict.ini \
         --path $MODEL_DIR/model.pt \
         --data data/l2/mucgec.test \
-        --pred $MODEL_DIR/mucgec.test.pred
+        --pred $MODEL_DIR/mucgec.test.pred \
+        --scorer ChERRANT \
+        --gold data/l2/mucgec.test.m2
 done
