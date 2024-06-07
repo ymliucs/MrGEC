@@ -53,7 +53,7 @@ All the datasets need to be processed to the follow format:
 [idx] [src] [tgt1] [tgt2] ... 
 ```
 
-Where `[idx]` is the index number of an instance which start with 1, and the sentences are separate by `\t`. 
+Where `[idx]` is the index number of an instance which starts with 1, and the sentences are separate by `\t`. 
 
 Usage example:
 ```
