@@ -46,7 +46,7 @@ A `\t` is used to separate the prefix `S` or `T` and the sentence.
 Each instance is separated by a blank line.
 
 ## Handle data leakage
-We find the FCGEC-Train and NaSGEC-Exam/NaCGEC have a severe **data leakage** problem. The code in *utils/handle_data_leakage_tool* can handle all GEC datasets which have data leakage problem.
+We find the FCGEC-Train and NaSGEC-Exam/NaCGEC have a severe **data leakage** problem. The code in *utils/handle_data_leakage_tool* can handle all the Chinese GEC datasets which have data leakage problem.
 
 All the datasets need to be processed to the follow format:
 ```txt
