@@ -30,17 +30,20 @@ python utils/download.py --repo_id HillZhang/pseudo_native_bart_CGEC
 python utils/download.py --repo_id fnlp/bart-large-chinese
 ```
 
-Before running, you are required to preprocess each sentence pair into the format of 
+Before running, you are required to preprocess each instance into the format of 
 ```txt
 S   [src]
-T   [tgt]
+T   [tgt1]
+T   [tgt2]
+T   [tgt3]
 
 S   [src]
-T   [tgt]
+T   [tgt1]
+T   [tgt2]
 ```
 Where `[src]` and `[tgt]` are the source and target sentences, respectively.
 A `\t` is used to separate the prefix `S` or `T` and the sentence.
-Each sentence pair is separated by a blank line.
+Each instance is separated by a blank line.
 
 ## Handle Data Leakage
 We find the FCGEC-Train and NaSGEC-Exam/NaCGEC have a severe **data leakage** problem. The code in *utils/handle_data_leakage_tool* can handle all GEC datasets which have data leakage problem.
@@ -62,7 +65,7 @@ python handle_leakage.py --data_dir data/ns_original --out_dir data/ns_leakage_p
 
 ## Download data
 
-You can download all the data we use [here](https://github.com/ymliucs/MrGEC).
+You can download all the data we use [here](https://drive.google.com/file/d/1PwQ8l5HZ2E5vcW-QZlFYqcU0SqM2INws/view?usp=sharing).
 
 ## Run
 You can see all the commands for running our experiments in the *bash* folder, and the hyperparameters can be set in the *configs* folder.
