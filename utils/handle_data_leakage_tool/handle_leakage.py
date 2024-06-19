@@ -67,7 +67,7 @@ def remove_repetition(data_dir, data_file, log_file):
     return {"name": data_file, "data": new_data}
 
 
-def extract_test_to_train(train, test, log_file):
+def extract_test_to_train(train, test, log_file, similarity_threshold=60):
     add_same_src_cnt = 0
     add_tgt_of_same_src_cnt = 0
     ignore_same_src_cnt = 0
@@ -108,7 +108,7 @@ def extract_test_to_train(train, test, log_file):
             top_k = train_src_bm25.top_k_sentence(remove_punct(test_src), k=100)
             for train_src, _, _ in top_k:
                 bleu_score = sentence_bleu(" ".join(remove_punct(train_src)), [" ".join(remove_punct(test_src))]).score
-                if bleu_score >= 60:
+                if bleu_score >= similarity_threshold:
                     train_data[test_src] = test_tgts
                     add_similar_src_cnt += 1
                     add_tgt_of_similar_src_cnt += len(test_tgts)
@@ -161,7 +161,7 @@ def extract_test_to_train(train, test, log_file):
     return {"name": train_name, "data": train_data}, {"name": test_name, "data": test_data}
 
 
-def remove_train(train, test, log_file):
+def remove_train(train, test, log_file, similarity_threshold=60):
     delect_same_src_cnt = 0
     delect_tgt_of_same_src_cnt = 0
     delect_similar_src_cnt = 0
@@ -181,7 +181,7 @@ def remove_train(train, test, log_file):
             top_k = train_src_bm25.top_k_sentence(remove_punct(test_src), k=100)
             for train_src, train_idx, _ in top_k:
                 bleu_score = sentence_bleu(" ".join(remove_punct(train_src)), [" ".join(remove_punct(test_src))]).score
-                if bleu_score >= 60:
+                if bleu_score >= similarity_threshold:
                     train_src_ori = train_srcs[train_idx]
                     assert remove_punct(train_src_ori) == remove_punct(train_src)
                     if train_src_ori in train_data.keys():
@@ -230,15 +230,15 @@ def main(args):
     if len(extract_tests) > 0:
         print("\n" + "=" * 50 + " Extract Test Sentences " + "=" * 50, file=log_file)
         for extract_test in extract_tests:
-            train, extract_test = extract_test_to_train(train, extract_test, log_file)
+            train, extract_test = extract_test_to_train(train, extract_test, log_file, args.similarity_threshold)
             new_extract_tests.append(extract_test)
     if len(extract_tests) > 0 or len(frozen_tests) > 0:
         print("\n" + "=" * 50 + " Remove Train Sentences " + "=" * 50, file=log_file)
         for extract_test in new_extract_tests:
             write_to_file(extract_test, args.out_dir)
-            train = remove_train(train, extract_test, log_file)
+            train = remove_train(train, extract_test, log_file, args.similarity_threshold)
         for frozen_test in frozen_tests:
-            train = remove_train(train, frozen_test, log_file)
+            train = remove_train(train, frozen_test, log_file, args.similarity_threshold)
         write_to_file(train, args.out_dir)
     log_file.close()
 
@@ -250,6 +250,7 @@ if __name__ == '__main__':
     parser.add_argument("--extract_test_files", help="extest file names needed extraction, split by english comma", default=None)
     parser.add_argument("--frozen_test_files", help="test file names purely for evaluation, split by english comma", default=None)
     parser.add_argument("--out_dir", help="output dir", default="./data_leakage_processed")
+    parser.add_argument("--similarity_threshold", type=float, help="similarity threshold", default=60)
     args = parser.parse_args()
     args.log_path = os.path.join(args.out_dir, "handle_leakage.log")
     main(args)
