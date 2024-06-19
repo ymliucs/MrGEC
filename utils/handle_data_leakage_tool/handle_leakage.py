@@ -250,7 +250,7 @@ if __name__ == '__main__':
     parser.add_argument("--extract_test_files", help="extest file names needed extraction, split by english comma", default=None)
     parser.add_argument("--frozen_test_files", help="test file names purely for evaluation, split by english comma", default=None)
     parser.add_argument("--out_dir", help="output dir", default="./data_leakage_processed")
-    parser.add_argument("--similarity_threshold", help="similarity threshold", default=60)
+    parser.add_argument("--similarity_threshold", type=float, help="similarity threshold", default=60)
     args = parser.parse_args()
     args.log_path = os.path.join(args.out_dir, "handle_leakage.log")
     main(args)
