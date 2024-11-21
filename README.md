@@ -96,7 +96,7 @@ If you find this repo helpful, please cite the following paper:
       Jiang, Haochen  and
       Zhang, Bo  and
       Li, Chen  and
-      Zhang, Ji,
+      Zhang, Ji",
     booktitle = "Findings of ACL",
     year = "2024",
 }
