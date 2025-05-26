@@ -89,15 +89,18 @@ You can download and check all the logs of our experiments [here](https://drive.
 ## Citation
 If you find this repo helpful, please cite the following paper:
 ```bib
-@inproceedings{liu-etal-2024-towards,
-    title = "{Towards Better Utilization of Multi-Reference Training Data for Chinese Grammatical Error Correction}",
+@inproceedings{liu-etal-2024-towards-better,
+    title = "{Towards Better Utilization of Multi-Reference Training Data for {C}hinese Grammatical Error Correction}",
     author = "Liu, Yumeng  and
       Li, Zhenghua  and
-      Jiang, Haochen  and
+      Jiang, HaoChen  and
       Zhang, Bo  and
       Li, Chen  and
       Zhang, Ji",
     booktitle = "Findings of ACL",
     year = "2024",
+    address = "Bangkok, Thailand",
+    url = "https://aclanthology.org/2024.findings-acl.180/",
+    pages = "3044--3052",
 }
 ```
